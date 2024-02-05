@@ -9,11 +9,15 @@ const slidervariants = {
     x: 0,
   },
   animate: {
-    x: "-50%",
+    x: -300,
     transition: {
       repeat: Infinity,
+
       repeatType: "reverse",
-      duration: 20,
+      ease: "linear",
+
+      duration: 8,
+      type: "tween",
     },
   },
 };
@@ -110,11 +114,12 @@ const Home = () => {
           </div>
         </motion.div>
         <motion.h1
+          style={{ opacity, scale }}
           variants={slidervariants}
           initial="initial"
           animate="animate"
-        className="absolute font-semibold text-purple-300/50 leading-none whitespace-nowrap bottom-10  text-[300px]">
-          DISCORD  DISCORD  DISCORD  DISCORD  DISCORD
+        className="absolute font-semibold text-purple-400 leading-none whitespace-nowrap bottom-10  text-[300px]">
+          DISCORD  DISCORD  DISCORD  DISCORD  DISCORD DISCORD DISCORD DISCORD DISCORD DISCORD
           </motion.h1>
       </motion.div>
     </motion.section>
