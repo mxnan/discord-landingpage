@@ -2,7 +2,7 @@ import chat from "../assets/discord-chat.webp"
 
 const About = () => {
   return (
-   <section className="mt-[-30vh]">
+   <section className="mt-[-15vh]">
     <div className="h-[300vh] w-full">
       <div className="sticky top-[10vh]">
         <div className="flex justify-center">
