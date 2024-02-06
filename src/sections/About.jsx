@@ -1,7 +1,22 @@
 import { useRef } from "react";
 
 import { motion, useScroll, useTransform } from "framer-motion";
-import abouthero from "../assets/discordabouthero.webp";
+import abouthero from "../assets/discordabouthero.svg";
+
+const animationOrder = {
+  initial: 0,
+  fiximagecenter: 0.1,
+  fiximageleft: 0.2,
+  textappearright: 0.3,
+  righttextgone: 0.4,
+  fiximageright: 0.5,
+  textappearleft: 0.6,
+  lefttextgone: 0.7,
+  imagecenterbottom: 0.8,
+  textcentertop: 0.9,
+  fadeout: 0.95,
+  end: 1,
+};
 
 const About = () => {
   const targetRef = useRef(null);
@@ -11,27 +26,34 @@ const About = () => {
   });
   //scrollprogress setup
 
-  const scale = useTransform(scrollYProgress, [0.3, 0.6, 0.9], [1, 1.5, 1.8]);
-  const x = useTransform(
+  const scale = useTransform(
     scrollYProgress,
-    [0.2, 0.4, 0.6, 0.8, 1],
-    ["0%", "20%", "-20%", "60%", "-80%"]
+    [animationOrder.initial],
+    ["100%"]
   );
-  const opacity = useTransform(scrollYProgress, [0.6, 1], [1, 0]);
-  const textopacity = useTransform(
+  const x = useTransform(scrollYProgress, [animationOrder.initial], ["0%"]);
+  const y = useTransform(scrollYProgress, [animationOrder.initial], ["0%"]);
+
+  const opacity = useTransform(
     scrollYProgress,
-    [ 0.3, 0.6, 0.8, 1],
-    [ 1, 0.6, 0.4, 0]
+    [
+      animationOrder.initial,
+      animationOrder.righttextgone,
+      animationOrder.lefttextgone,
+      animationOrder.fadeout,
+    ],
+    [1, 1, 1, 0]
   );
   //animation settings
 
   return (
     <section className="mt-[-15vh]">
-      <div ref={targetRef} className="h-[150vh] relative w-full">
-        <div className="sticky top-[10vh]">
+      <div ref={targetRef} className="h-[200vh] relative w-full">
+        {/*imagediv*/}
+        <div className="sticky top-[30vh]">
           <div className="flex justify-center">
             <motion.div
-              style={{ scale, x, opacity }}
+              style={{ scale, x, y, opacity }}
               className=" relative overflow-hidden origin-top"
             >
               <img
@@ -39,18 +61,32 @@ const About = () => {
                 alt="about"
                 className="h-[75vh] max-h-[45vw] w-auto bg-cover bg-center"
               />
-              <motion.div
-                style={{textopacity}}
-                className="absolute w-max  top-8 left-8 
-               text-[200px] leading-none bg-transparent text-yellow-500 font-extrabold"
-              >
-                Stream <br />
-                Chats <br />
-                Calls
-              </motion.div>
             </motion.div>
           </div>
         </div>
+
+        {/*textdiv*/}
+
+        <motion.div
+          className=" absolute right-10 top-[50vh]
+               text-xl "
+        >
+          <p className="uppercase text-end">
+            Discord <br /> for <br /> every <br /> device
+          </p>
+          
+        </motion.div>
+        <motion.div
+          className=" absolute left-10 top-[180vh]
+               text-xl "
+        >
+          <p className="uppercase text-start">
+          Low-latency voice and video feels like you’re in the same
+            room.<br />
+            Wave hello over video, watch friends stream their games, or gather
+            up and have a drawing session with screen share.
+          </p>
+        </motion.div>
       </div>
     </section>
   );
