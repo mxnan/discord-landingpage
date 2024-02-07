@@ -36,39 +36,47 @@ const Home = () => {
     >
       {/* Nav icons */}
       <motion.div
-        initial={{ x: -1000 }}
-        animate={{ x: 0 - 300 }}
+        initial={{ y: "-200%", x: "-50%" }}
+        animate={{ y: "0%",  }}
         transition={{
-          duration: 1.3,
+          duration: 1,
           type: "spring",
-          staggerChildren: 0.1,
+          
         }}
         className="absolute left-1/2  z-10 top-10
       flex flex-row gap-4  "
       >
-        <p className="text-2xl font-semibold">hendn</p>
-        <p className="text-2xl font-semibold">hendn</p>
-        <p className="text-2xl font-semibold">hendn</p>
-        <p className="text-2xl font-semibold">hendn</p>
-        <p className="text-2xl font-semibold">hendn</p>
-        <p className="text-2xl font-semibold">hendn</p>
+        <p className="text-2xl font-normal">hendn</p>
+        <p className="text-2xl font-normal">hendn</p>
+        <p className="text-2xl font-normal">hendn</p>
+        <p className="text-2xl font-normal">hendn</p>
+        <p className="text-2xl font-normal">hendn</p>
+        <p className="text-2xl font-normal">hendn</p>
+        
+        
       </motion.div>
       <motion.div
         className=" relative overflow-hidden h-full flex items-center justify-center
        bg-sky-800 m-3 rounded-3xl"
       >
         <motion.img
-          initial={{ scale: 2 }}
+         initial={{ y: "-200%", scale: 0.5 }}
+         animate={{ y: "0%", scale: 0.9 }}
+         transition={{ duration: 2, type: "spring" }}
+          
           style={{ scale, position }}
           src={discordbg}
           alt="HomeBG"
-          className="cover absolute max-lg:hidden  w-full h-full"
+          className=" bg-bottom absolute -bottom-[72px] max-lg:hidden  w-full h-full"
         />
         <motion.div
+          initial={{ y: "-200%" }}
+          animate={{ y: "0%" }}
+          transition={{ duration: 1.5, type: "spring" ,delay:0.7 }}
           style={{ scale, x: "-50%", position }}
-          className=" left-1/2 lg:py-12   lg:gap-5 flex flex-col justify-center items-center lg:mb-[200px]"
+          className=" left-1/2 lg:py-12 z-30   lg:gap-5 flex flex-col justify-center items-center lg:mb-[200px]"
         >
-          <h1 className="text-7xl  font-black tracking-wide whitespace-nowrap">
+          <h1 className="text-7xl  font-bold tracking-wide whitespace-nowrap">
             IMAGINE A PLACE...
           </h1>
           <p className="text-2xl font-extralight text-center ">
@@ -106,12 +114,18 @@ const Home = () => {
             </motion.button>
           </div>
         </motion.div>
-        <img
+        <motion.img
+         initial={{ x: "200%" }}
+         animate={{ x: "0%" }}
+         transition={{ duration: 3, type: "spring",delay:1 }}
           src={discordright}
           alt="heroright"
           className="cover w-[40vw] max-md:hidden absolute -right-36 bottom-0 "
         />
-        <img
+        <motion.img
+         initial={{ x: "-200%" }}
+         animate={{ x: "0%" }}
+         transition={{ duration: 3, type: "spring",delay:1 }}
           src={discordleft}
           alt="heroleft"
           className="cover w-[40vw] max-md:hidden absolute -left-48 bottom-0 "
