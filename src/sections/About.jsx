@@ -1,7 +1,7 @@
 import { useRef } from "react";
 
 import { motion, useScroll, useTransform } from "framer-motion";
-import abouthero from "../assets/discordabouthero.svg";
+import { abouthero } from "../assets";
 
 const animationOrder = {
   initial: 0,
@@ -10,7 +10,7 @@ const animationOrder = {
   textappearright: 0.3,
   righttextgone: 0.4,
   fiximageright: 0.5,
-  textappearleft: 0.6,
+  textappearbottomleft: 0.6,
   lefttextgone: 0.7,
   imagecenterbottom: 0.8,
   textcentertop: 0.9,
@@ -28,22 +28,110 @@ const About = () => {
 
   const scale = useTransform(
     scrollYProgress,
-    [animationOrder.initial],
-    ["100%"]
+    [
+      animationOrder.initial,
+      animationOrder.fiximagecenter,
+      animationOrder.fiximageleft,
+      animationOrder.textappearright,
+      animationOrder.righttextgone,
+      animationOrder.fiximageright,
+      animationOrder.textappearbottomleft,
+      animationOrder.lefttextgone,
+      animationOrder.imagecenterbottom,
+      animationOrder.textcentertop,
+      animationOrder.fadeout,
+    ],
+    [
+      "130%",
+      "130%",
+      "130%",
+      "70%",
+      "70%",
+      "70%",
+      "70%",
+      "70%",
+      "70%",
+      "60%",
+      "40%",
+    ]
   );
-  const x = useTransform(scrollYProgress, [animationOrder.initial], ["0%"]);
-  const y = useTransform(scrollYProgress, [animationOrder.initial], ["0%"]);
+  const x = useTransform(
+    scrollYProgress,
+    [
+      animationOrder.initial,
+      animationOrder.fiximagecenter,
+      animationOrder.fiximageleft,
+      animationOrder.textappearright,
+      animationOrder.righttextgone,
+      animationOrder.fiximageright,
+      animationOrder.textappearbottomleft,
+      animationOrder.lefttextgone,
+      animationOrder.imagecenterbottom,
+      animationOrder.textcentertop,
+      animationOrder.fadeout,
+    ],
+    ["0%", "0%", "0%", "0%", "-30%", "-30%", "30%", "30%", "30%", "30%", "30%"]
+  );
+  const y = useTransform(
+    scrollYProgress,
+    [
+      animationOrder.initial,
+      animationOrder.fiximagecenter,
+      animationOrder.fiximageleft,
+      animationOrder.textappearright,
+      animationOrder.righttextgone,
+      animationOrder.fiximageright,
+      animationOrder.textappearbottomleft,
+      animationOrder.lefttextgone,
+      animationOrder.imagecenterbottom,
+      animationOrder.textcentertop,
+      animationOrder.fadeout,
+    ],
+    [
+      "0%",
+      "-10%",
+      "-20%",
+      "-30%",
+      "-30%",
+      "0%",
+      "0%",
+      "20%",
+      "20%",
+      "20%",
+      "20%",
+    ]
+  );
 
   const opacity = useTransform(
     scrollYProgress,
     [
       animationOrder.initial,
+      animationOrder.fiximagecenter,
+      animationOrder.fiximageleft,
+      animationOrder.textappearright,
       animationOrder.righttextgone,
+      animationOrder.fiximageright,
+      animationOrder.textappearbottomleft,
       animationOrder.lefttextgone,
+      animationOrder.imagecenterbottom,
+      animationOrder.textcentertop,
       animationOrder.fadeout,
     ],
-    [1, 1, 1, 0]
+    [
+      "0%",
+      "0%",
+      "100%",
+      "100%",
+      "100%",
+      "100%",
+      "100%",
+      "100%",
+      "90%",
+      "50%",
+      "0%",
+    ]
   );
+
   //animation settings
 
   return (
@@ -68,23 +156,21 @@ const About = () => {
         {/*textdiv*/}
 
         <motion.div
-          className=" absolute right-10 top-[50vh]
+          style={{ opacity }}
+          className=" absolute right-10 top-[60vh]
                text-xl "
         >
-          <p className="uppercase text-end">
-            Discord <br /> for <br /> every <br /> device
+          <p className="uppercase text-8xl text-end">
+            For <br /> Your <br /> every <br /> device .
           </p>
-          
         </motion.div>
         <motion.div
-          className=" absolute left-10 top-[180vh]
+          style={{ opacity }}
+          className=" absolute left-10 top-[150vh]
                text-xl "
         >
-          <p className="uppercase text-start">
-          Low-latency voice and video feels like you’re in the same
-            room.<br />
-            Wave hello over video, watch friends stream their games, or gather
-            up and have a drawing session with screen share.
+          <p className="uppercase text-7xl text-end">
+            Low-latency , <br /> voice , <br /> video , <br /> streams .
           </p>
         </motion.div>
       </div>

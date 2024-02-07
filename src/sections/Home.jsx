@@ -2,30 +2,7 @@ import { useScroll, useTransform, motion } from "framer-motion";
 import { useRef } from "react";
 import { PiWindowsLogoFill } from "react-icons/pi";
 import { PiBrowsersBold } from "react-icons/pi";
-import DiscordBG from "../assets/discordbg.svg";
-import discordleft from "../assets/discordleft.svg";
-import discordright from "../assets/discordright.svg";
-
-{
-  /* const slidervariants = {
-  initial: {
-    x: 0,
-  },
-  animate: {
-    x: -300,
-    transition: {
-      repeat: Infinity,
-
-      repeatType: "reverse",
-      ease: "linear",
-
-      duration: 8,
-      type: "tween",
-    },
-  },
- };
-*/
-}
+import { discordbg, discordleft, discordright } from "../assets";
 
 const Home = () => {
   const targetRef = useRef(null);
@@ -38,7 +15,7 @@ const Home = () => {
   const opacity = useTransform(
     scrollYProgress,
     [0, 0.2, 0.4, 0.6, 0.8, 1],
-    [1, 0.9, 0.6, 0.4, 0, 0]
+    [1, 0.8, 0.6, 0.2, 0, 0]
   );
   const scale = useTransform(
     scrollYProgress,
@@ -55,18 +32,16 @@ const Home = () => {
     <motion.section
       style={{ opacity }}
       ref={targetRef}
-      className=" relative overflow-x-clip w-full z-10 h-[80vh]  "
+      className=" relative overflow-x-clip w-full  h-[80vh]  "
     >
       {/* Nav icons */}
       <motion.div
-      
         initial={{ x: -1000 }}
         animate={{ x: 0 - 300 }}
         transition={{
           duration: 1.3,
           type: "spring",
           staggerChildren: 0.1,
-
         }}
         className="absolute left-1/2  z-10 top-10
       flex flex-row gap-4  "
@@ -82,8 +57,10 @@ const Home = () => {
         className=" relative overflow-hidden h-full flex items-center justify-center
        bg-sky-800 m-3 rounded-3xl"
       >
-        <img
-          src={DiscordBG}
+        <motion.img
+          initial={{ scale: 2 }}
+          style={{ scale, position }}
+          src={discordbg}
           alt="HomeBG"
           className="cover absolute max-lg:hidden  w-full h-full"
         />
@@ -103,7 +80,6 @@ const Home = () => {
           <div className="flex text-xl p-4 flex-row items-center lg:gap-16">
             <motion.button
               whileHover={{
-                
                 backgroundColor: "white",
                 color: "black",
                 border: "2px solid black",
@@ -117,7 +93,6 @@ const Home = () => {
             </motion.button>
             <motion.button
               whileHover={{
-                
                 backgroundColor: "white",
                 color: "black",
                 border: "2px solid black",
@@ -134,23 +109,13 @@ const Home = () => {
         <img
           src={discordright}
           alt="heroright"
-          className="cover max-md:hidden absolute -right-36 bottom-0 "
+          className="cover w-[40vw] max-md:hidden absolute -right-36 bottom-0 "
         />
         <img
           src={discordleft}
           alt="heroleft"
-          className="cover max-md:hidden absolute -left-48 bottom-0 "
+          className="cover w-[40vw] max-md:hidden absolute -left-48 bottom-0 "
         />
-        {/*
-        <motion.h1
-          style={{ opacity, scale }}
-          variants={slidervariants}
-          initial="initial"
-          animate="animate"
-        className="absolute font-semibold text-purple-400 leading-none whitespace-nowrap bottom-10  text-[300px]">
-          DISCORD  DISCORD  DISCORD  DISCORD  DISCORD DISCORD DISCORD DISCORD DISCORD DISCORD
-          </motion.h1>
-          */}
       </motion.div>
     </motion.section>
   );
