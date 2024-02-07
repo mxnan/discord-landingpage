@@ -1,4 +1,4 @@
-import { About, Contact,  Home, Intro } from "./sections";
+import { About, Contact,  Home, IntroOne } from "./sections";
 
 function App() {
   return (
@@ -8,7 +8,7 @@ function App() {
         className="relative z-20 w-full overflow-x-clip "
       >
         <About />
-        <Intro />
+        <IntroOne />
         
         <Contact />
       </div>

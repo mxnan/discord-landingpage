@@ -1,6 +1,6 @@
 import Home from "./Home";
 import About from "./About";
 import Contact from "./Contact";
-import Intro from "./Intro";
+import IntroOne from "./IntroOne";
 
-export { Home, About, Contact, Intro };
+export { Home, About, Contact, IntroOne };
