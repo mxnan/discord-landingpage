@@ -117,11 +117,11 @@ const IntroOne = () => {
   //scrollprogress settings
 
   return (
-    <section ref={targetRef}>
+    <section ref={targetRef} className="overflow-hidden">
       {/*wrapper*/}
-      <div className=" flex w-full   h-[150vh]">
+      <div className=" flex  bg-sky-600 bg-opacity-50 ml-6 mr-6 rounded-tl-3xl rounded-tr-3xl     h-[150vh]">
         {/*content wrap*/}
-        <div className="sticky top-0 w-full ">
+        <div className="sticky top-0 w-full py-24 text-white ">
           {/* img div */}
           <motion.div
             style={{ x, y, opacity }}
@@ -134,10 +134,10 @@ const IntroOne = () => {
             />
             {/*text div*/}
             <motion.div className="w-full gap-6 border-white border-r-2 flex flex-col items-start px-24 justify-center">
-              <p className="text-4xl font-medium">
+              <p className="text-6xl font-medium">
                 Create an invite-only place where you belong
               </p>
-              <p className="text-2xl font-extralight">
+              <p className="text-3xl font-extralight">
                 Discord servers are organized into topic-based channels where
                 you can collaborate, share, and just talk about your day without
                 clogging up a group chat.

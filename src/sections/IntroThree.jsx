@@ -108,18 +108,20 @@ const IntroOne = () => {
       "60%",
       "90%",
       "100%",
-      "100%",
-      "50%",
-      "20%",
-      "10%",
+      "80%",
+      "30%",
+      "0%",
+      "0%",
     ]
   );
   //scrollprogress settings
 
   return (
-    <section ref={targetRef}>
+    <section ref={targetRef}
+    className="overflow-hidden"
+    >
       {/*wrapper*/}
-      <div className=" flex w-full   h-[150vh]">
+      <div className=" flex  bg-sky-800 bg-opacity-50 ml-6 mr-6 rounded-bl-3xl rounded-br-3xl  h-[150vh]">
         {/*content wrap*/}
         <div className="sticky top-0 w-full ">
           {/* img div */}
@@ -134,8 +136,8 @@ const IntroOne = () => {
             />
             {/*text div*/}
             <motion.div className="w-full border-white  border-r-2 gap-6 flex flex-col items-start px-24 justify-center">
-              <p className="text-4xl font-medium">From few to a fandom</p>
-              <p className="text-2xl font-extralight">
+              <p className="text-6xl font-medium">From few to a fandom</p>
+              <p className="text-3xl font-extralight">
                 Get any community running with moderation tools and custom
                 member access. Give members special powers, set up private
                 channels, and more.

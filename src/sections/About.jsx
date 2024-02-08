@@ -147,7 +147,7 @@ const About = () => {
               <img
                 src={abouthero}
                 alt="about"
-                className="h-[75vh] max-h-[45vw] w-auto bg-cover bg-center"
+                className="h-[75vh] max-h-[45vw] border-b-[1px]  border-white w-auto bg-cover bg-center"
               />
             </motion.div>
           </div>
@@ -158,7 +158,7 @@ const About = () => {
         <motion.div
           style={{ opacity }}
           className=" absolute right-10 top-[60vh]
-               text-xl "
+               text-xl font-semibold "
         >
           <p className="uppercase text-8xl text-end">
             For <br /> Your <br /> every <br /> device .
@@ -167,10 +167,10 @@ const About = () => {
         <motion.div
           style={{ opacity }}
           className=" absolute left-10 top-[150vh]
-               text-xl "
+               text-xl font-semibold "
         >
           <p className="uppercase text-7xl text-end">
-            Low-latency , <br /> voice , <br /> video , <br /> streams .
+            Low-latency , <br /> streams , <br /> video , <br /> voice .
           </p>
         </motion.div>
       </div>

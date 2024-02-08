@@ -117,9 +117,10 @@ const IntroOne = () => {
   //scrollprogress settings
 
   return (
-    <section ref={targetRef}>
+    <section ref={targetRef}
+    className="overflow-hidden">
       {/*wrapper*/}
-      <div className=" flex w-full   h-[150vh]">
+      <div className=" flex  bg-sky-700 bg-opacity-50 ml-6 mr-6   h-[150vh]">
         {/*content wrap*/}
         <div className="sticky top-0 w-full ">
           {/* img div */}
@@ -134,8 +135,8 @@ const IntroOne = () => {
             />
             {/*text div*/}
             <motion.div className="w-full gap-6 border-white border-l-2 flex flex-col items-start px-24 justify-center">
-              <p className="text-4xl font-medium">Where hanging out is easy</p>
-              <p className="text-2xl font-extralight">
+              <p className="text-6xl font-medium">Where hanging out is easy</p>
+              <p className="text-3xl font-extralight">
                 Grab a seat in a voice channel when you’re free. Friends in your
                 server can see you’re around and instantly pop in to talk
                 without having to call.

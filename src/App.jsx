@@ -1,6 +1,7 @@
 import {
   About,
   Contact,
+  Download,
   Home,
   IntroOne,
   IntroThree,
@@ -16,6 +17,7 @@ function App() {
         <IntroOne />
         <IntroTwo />
         <IntroThree />
+        <Download />
         <Contact />
       </div>
     </div>
