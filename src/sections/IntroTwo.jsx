@@ -1,6 +1,6 @@
 import { useScroll, useTransform, motion } from "framer-motion";
 import { useRef } from "react";
-import { introOnehero } from "../assets";
+import { introTwohero } from "../assets";
 
 const animationOrderleft = {
   initial: 0,
@@ -125,22 +125,20 @@ const IntroOne = () => {
           {/* img div */}
           <motion.div
             style={{ x, y, opacity }}
-            className=" flex flex-row justify-center px-12"
+            className=" flex flex-row-reverse justify-center px-12"
           >
             <img
-              src={introOnehero}
-              alt="introOnehero"
+              src={introTwohero}
+              alt="introTwohero"
               className="bg-cover bg-center m-2 border-2 border-white rounded-3xl"
             />
             {/*text div*/}
-            <motion.div className="w-full gap-6 border-white border-r-2 flex flex-col items-start px-24 justify-center">
-              <p className="text-4xl font-medium">
-                Create an invite-only place where you belong
-              </p>
+            <motion.div className="w-full gap-6 border-white border-l-2 flex flex-col items-start px-24 justify-center">
+              <p className="text-4xl font-medium">Where hanging out is easy</p>
               <p className="text-2xl font-extralight">
-                Discord servers are organized into topic-based channels where
-                you can collaborate, share, and just talk about your day without
-                clogging up a group chat.
+                Grab a seat in a voice channel when you’re free. Friends in your
+                server can see you’re around and instantly pop in to talk
+                without having to call.
               </p>
             </motion.div>
           </motion.div>

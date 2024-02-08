@@ -1,6 +1,6 @@
 import { useScroll, useTransform, motion } from "framer-motion";
 import { useRef } from "react";
-import { introOnehero } from "../assets";
+import { introThreehero } from "../assets";
 
 const animationOrderleft = {
   initial: 0,
@@ -128,19 +128,17 @@ const IntroOne = () => {
             className=" flex flex-row justify-center px-12"
           >
             <img
-              src={introOnehero}
-              alt="introOnehero"
+              src={introThreehero}
+              alt="introThreehero"
               className="bg-cover bg-center m-2 border-2 border-white rounded-3xl"
             />
             {/*text div*/}
-            <motion.div className="w-full gap-6 border-white border-r-2 flex flex-col items-start px-24 justify-center">
-              <p className="text-4xl font-medium">
-                Create an invite-only place where you belong
-              </p>
+            <motion.div className="w-full border-white  border-r-2 gap-6 flex flex-col items-start px-24 justify-center">
+              <p className="text-4xl font-medium">From few to a fandom</p>
               <p className="text-2xl font-extralight">
-                Discord servers are organized into topic-based channels where
-                you can collaborate, share, and just talk about your day without
-                clogging up a group chat.
+                Get any community running with moderation tools and custom
+                member access. Give members special powers, set up private
+                channels, and more.
               </p>
             </motion.div>
           </motion.div>
