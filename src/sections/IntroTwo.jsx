@@ -120,7 +120,7 @@ const IntroOne = () => {
     <section ref={targetRef}
     className="overflow-hidden">
       {/*wrapper*/}
-      <div className=" flex  bg-sky-700 bg-opacity-50 ml-6 mr-6   h-[150vh]">
+      <div className=" flex  bg-sky-800 bg-opacity-50 ml-6 mr-6   h-[150vh]">
         {/*content wrap*/}
         <div className="sticky top-0 w-full ">
           {/* img div */}

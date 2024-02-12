@@ -121,7 +121,7 @@ const IntroOne = () => {
     className="overflow-hidden"
     >
       {/*wrapper*/}
-      <div className=" flex  bg-sky-800 bg-opacity-50 ml-6 mr-6 rounded-bl-3xl rounded-br-3xl  h-[150vh]">
+      <div className=" flex  bg-sky-900 bg-opacity-50 ml-6 mr-6 rounded-bl-3xl rounded-br-3xl  h-[150vh]">
         {/*content wrap*/}
         <div className="sticky top-0 w-full ">
           {/* img div */}

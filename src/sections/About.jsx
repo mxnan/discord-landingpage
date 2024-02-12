@@ -170,7 +170,8 @@ const About = () => {
                text-xl font-semibold "
         >
           <p className="uppercase text-7xl text-end">
-            Low-latency , <br /> streams , <br /> video , <br /> voice .
+            Low-latency , <br /> streams , <br /> <span className="tracking-wide">voice ,</span> <br />{" "}
+            <span className="tracking-normal">video .</span>
           </p>
         </motion.div>
       </div>
