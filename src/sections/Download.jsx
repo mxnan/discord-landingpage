@@ -53,9 +53,35 @@ const Download = () => {
       "30%",
     ]
   );
-
-
- 
+  const contentopacity = useTransform(
+    scrollYProgress,
+    [
+      animationOrderone.initial,
+      animationOrderone.first,
+      animationOrderone.second,
+      animationOrderone.third,
+      animationOrderone.fourth,
+      animationOrderone.fifth,
+      animationOrderone.sixth,
+      animationOrderone.seven,
+      animationOrderone.eight,
+      animationOrderone.nine,
+      animationOrderone.end,
+    ],
+    [
+      "0%",
+      "0%",
+      "0%",
+      "100%",
+      "100%",
+      "100%",
+      "100%",
+      "100%",
+      "0%",
+      "0%",
+      "0%",
+    ]
+  );
 
   //scrollprogress settings
 
@@ -64,14 +90,14 @@ const Download = () => {
       {" "}
       {/** white div **/}
       <motion.div
-      style={{  scale: bgscale }}
-      initial={{ backgroundColor: "whitesmoke"}}
-      animate={{ backgroundColor: "khaki"}}
-      transition={{ 
-        duration: 2,
-        repeat: Infinity,
-        repeatType: "reverse",
-         ease: "easeInOut" 
+        style={{ scale: bgscale }}
+        initial={{ backgroundColor: "whitesmoke" }}
+        animate={{ backgroundColor: "khaki" }}
+        transition={{
+          duration: 2,
+          repeat: Infinity,
+          repeatType: "reverse",
+          ease: "easeInOut",
         }}
         className=" 
         w-full h-full
@@ -79,14 +105,20 @@ const Download = () => {
       >
         {/** white div end **/}
       </motion.div>
-      {/* button on action*/}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2
-      bg-transparent 
-      ">
+      {/* content div*/}
+      <motion.div
+      style={{ opacity: contentopacity }}
+        className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2
+      bg-transparent flex flex-col gap-12
+      "
+      >
+        <motion.p className="text-6xl font-medium text-sky-700 capitalize text-center">
+          Ready to <br />
+          <strong className="text-7xl">start</strong>
+          <br /> your journey ?
+        </motion.p>
         <motion.button
-        
           whileHover={{
-          
             scale: 1.2,
             backgroundColor: "#0a3f94",
             opacity: 1,
@@ -97,15 +129,14 @@ const Download = () => {
             transition: { duration: 0.2 },
           }}
           className="
-            text-[#0a3f94] whitespace-nowrap
+            text-[#282f74] whitespace-nowrap
             flex items-center border-1 justify-center gap-2 text-4xl
              bg-[#0a3f94] bg-opacity-50 rounded-3xl font-semibold
               p-4 px-12"
         >
           Download for Windows <PiWindowsLogoFill />
         </motion.button>
-      </div>
-      {/** wrapper end **/}
+      </motion.div>
     </section>
   );
 };
