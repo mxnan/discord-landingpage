@@ -91,13 +91,13 @@ const Download = () => {
       {/** white div **/}
       <motion.div
         style={{ scale: bgscale }}
-        initial={{ backgroundColor: "whitesmoke" }}
-        animate={{ backgroundColor: "khaki" }}
+        initial={{ backgroundColor: "#e7f6ff" }}
+        animate={{ backgroundColor: "#ffedfa" }}
         transition={{
-          duration: 2,
+          duration: 4,
           repeat: Infinity,
           repeatType: "reverse",
-          ease: "easeInOut",
+          ease: "easeIn",
         }}
         className=" 
         w-full h-full

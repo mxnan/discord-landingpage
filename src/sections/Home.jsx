@@ -44,14 +44,14 @@ const Home = () => {
           type: "spring",
         }}
         className="absolute left-1/2  z-10 top-6
-      flex flex-row gap-4  "
+      flex flex-row items-center capitalize gap-6 "
       >
-        <p className="text-xl font-normal">hendn</p>
-        <p className="text-xl font-normal">hendn</p>
-        <p className="text-xl font-normal">hendn</p>
-        <p className="text-xl font-normal">hendn</p>
-        <p className="text-xl font-normal">hendn</p>
-        <p className="text-xl font-normal">hendn</p>
+        <p className="text-xl font-normal">download</p>
+        <p className="text-xl font-normal">nitro</p>
+        <p className="text-xl font-normal">discover</p>
+        <p className="text-xl font-normal">safety</p>
+        <p className="text-xl font-normal">support</p>
+        <p className="text-xl font-normal">careers</p>
       </motion.div>
       <motion.div
         className=" relative border-8 border-white overflow-hidden h-full flex items-center justify-center

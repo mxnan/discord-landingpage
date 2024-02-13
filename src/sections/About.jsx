@@ -135,7 +135,7 @@ const About = () => {
   //animation settings
 
   return (
-    <section className="mt-[-15vh]">
+    <section className="mt-[-15vh] max-md:hidden">
       <div ref={targetRef} className="h-[200vh] relative w-full">
         {/*imagediv*/}
         <div className="sticky top-[30vh]">
