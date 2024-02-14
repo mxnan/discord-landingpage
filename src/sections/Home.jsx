@@ -29,6 +29,8 @@ const Home = () => {
   });
   //scrollprogress used
 
+
+
   return (
     <motion.section
       style={{ opacity }}
@@ -54,8 +56,9 @@ const Home = () => {
         <p className="text-xl font-normal">careers</p>
       </motion.div>
       <motion.div
+
         className=" relative border-8 border-white overflow-hidden h-full flex items-center justify-center
-       bg-sky-500/60 m-6 rounded-3xl"
+       bg-sky-700/50 m-6 rounded-3xl"
       >
         <motion.img
           initial={{ y: "-200%", scale: 0.5 }}
